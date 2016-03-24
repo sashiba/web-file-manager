@@ -1,0 +1,5 @@
+test:
+  name: Test Familiq
+  email: test@example.bg
+  password_digest: <%= BCrypt::Password.create('foobar')%>
+  admin: false
