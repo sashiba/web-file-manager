@@ -1,0 +1,5 @@
+<%= image_tag @file.file.url if @file.picture? %>
+
+<%= link_to "Back", user_path(@file.user_id) %>
+
+<%= link_to "Delete file", user_file_path(@file.user_id, @file), method: :delete, data: { confirm: "Are you sure?" } %>
