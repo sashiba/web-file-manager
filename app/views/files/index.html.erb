@@ -1,3 +1,10 @@
-<% @files.each do |file| %>
-  <%= file %>
-<% end %>
+<div>
+  <ul>
+    <% @files.each do |file| %>
+      <li><%= link_to file.file.file.filename, user_file_path(file.user_id, file) %></li>
+    <% end %>
+  </ul>
+</div>
+
+<%= link_to "Upload", new_user_file_path(params[:user_id]), class: 'btn btn-primary' %>
+<%= link_to "Back", user_path(params[:user_id]), class: 'btn btn-primary' %>
