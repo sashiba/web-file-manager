@@ -32,25 +32,6 @@ footer {
   border-top: 1px solid #eaeaea;
 }
 
-ul#menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-ul#menu li {
-  padding: 3px;
-}
-ul#menu a {
-  display: block;
-    width: 60px;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px 4px 0 0;
-  }
-ul#menu a:hover {
-  background-color: #1F5C99;
-}
-
 
 /* mixins, variables, etc. */
 
@@ -189,4 +170,128 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+/*
+.menu {
+  margin-left: 20px;
+  ul.topnav {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+    float: left;
+    background: #222;
+  }
+  ul.topnav li {
+    float: left;
+    margin: 0;
+    padding: 0 15px 0 0;
+    position: relative;
+  }
 
+  ul.topnav li a {
+    padding: 10px 15px;
+    color: #fff;
+    display: block;
+  }
+
+  ul.topnav li a:hover {
+    background: #808c99;
+  }
+
+  ul.topnav li span {
+    width: 17px;
+    height: 35px;
+    float: left;
+  }
+
+  ul.topnav li span.subhover {background-position: center bottom; cursor: pointer;}
+
+  ul.topnav li span.subnav {
+    list-style: none;
+    position: absolute;
+    left: 0; top: 35px;
+    background: #333;
+    display: none;
+    float: left;
+    width: 170px;
+    border: 1px solid #111;
+  }
+
+  ul.topnav li ul.subnav li {
+    margin: 0; padding: 0;
+    border-top: 1px solid #252525; *--Create bevel effect--/
+    border-bottom: 1px solid #444; *--Create bevel effect--/
+    clear: both;
+    width: 170px;
+  }
+
+  html ul.topnav li ul.subnav li a {
+    float: left;
+    width: 145px;
+    background: #333;
+    padding-left: 20px;
+  }
+
+  html ul.topnav li ul.subnav li a:hover {
+    background: #222;
+  }
+}
+*/
+
+.menu{
+  background: grey;
+}
+
+.menu ul.topnav {
+  list-style: none;
+  color: red;
+  display: inline-block;
+  /*float: left;*/
+  li {
+    float: left;
+    margin: 0;
+    padding: 0 15px 0 0;
+    position: relative;
+    a {
+      padding: 10px, 15px;
+      color: #fff;
+      display: block;
+    }
+    a:hover { background: #808c99; }
+    span {
+      width: 17px;
+      height: 35px;
+      float: left;
+      background: blue no-repeat center top;
+      .subhover { background-position: center bottom; cursor: pointer; }
+    }
+  }
+}
+
+.menu  ul.topnav li span.subnav {
+  list-style: none;
+  position: absolute;
+  left: 0; top: 35px;
+  background: #333;
+  display: none;
+  float: left;
+  width: 170px;
+  border: 1px solid #111;
+}
+
+.menu ul.topnav li ul.subnav li {
+  margin: 0; padding: 0;
+  border-top: 1px solid #252525;
+  border-bottom: 1px solid #444;
+  clear: both;
+}
+
+html ul.topnav li ul.subnav li a {
+  float: left;
+  width: 145px;
+  background: #333;
+  padding-left: 20px;
+}
+
+html ul.topnav li ul.subnav li a:hover {
+  background: #222;
+}
